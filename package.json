@@ -2,12 +2,21 @@
   "name": "@axgtickets/common",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./build/index.js",
+  "types": "./build/ubdex.d.ts",
+  "files": [
+    "/build/**/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "del ./build/*",
+    "build": "npm run clean && tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "devDependencies": {
+    "del-cli": "^7.0.0",
+    "typescript": "^5.9.3"
+  }
 }
